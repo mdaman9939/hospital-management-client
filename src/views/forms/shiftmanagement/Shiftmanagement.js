@@ -46,7 +46,7 @@ const ShiftManagement = () => {
   useEffect(() => {
     const token = localStorage.getItem('token') // Get the token from localStorage
     if (token) {
-      fetch('${process.env.REACT_APP_API_URL}/api/employee-records', {
+      fetch(`${process.env.REACT_APP_API_URL}/api/employee-records`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ const ShiftManagement = () => {
   useEffect(() => {
     const token = localStorage.getItem('token') // Get the token from localStorage
     if (token) {
-      fetch('${process.env.REACT_APP_API_URL}/api/shifts', {
+      fetch(`${process.env.REACT_APP_API_URL}/api/shifts`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ const ShiftManagement = () => {
     const token = localStorage.getItem('token') // Make sure the key is 'token'
 
     if (token) {
-      fetch('${process.env.REACT_APP_API_URL}/api/shift', {
+      fetch(`${process.env.REACT_APP_API_URL}/api/shift`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

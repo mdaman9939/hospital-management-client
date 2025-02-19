@@ -89,7 +89,7 @@ const AppointmentScheduling = () => {
   const fetchDoctors = async () => {
     const token = localStorage.getItem('token') // Get the token from local storage
     try {
-      const response = await fetch('${process.env.REACT_APP_API_URL}/api/doctor-profiles', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/doctor-profiles`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`, // Include the token in the request
@@ -159,7 +159,7 @@ const AppointmentScheduling = () => {
     }
 
     try {
-      const response = await fetch('${process.env.REACT_APP_API_URL}/api/appointments', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/appointments`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -77,7 +77,7 @@ const PatientRegistrationAdmission = () => {
         return
       }
 
-      const response = await fetch('${process.env.REACT_APP_API_URL}/api/patient', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/patient`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`, // Include token in Authorization header
@@ -116,7 +116,7 @@ const PatientRegistrationAdmission = () => {
 
     // POST request to register the patient
     try {
-      const response = await fetch('${process.env.REACT_APP_API_URL}/api/register', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/register`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
