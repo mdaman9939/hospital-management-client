@@ -22,6 +22,8 @@ const Login = () => {
   const [error, setError] = useState('')
   const navigate = useNavigate()
 
+  console.log('API URL:', process.env.REACT_APP_API_URL)
+
   const handleLogin = async (e) => {
     e.preventDefault()
     setError('') // Clear any previous errors
