@@ -70,7 +70,7 @@ const AppointmentScheduling = () => {
   // Fetch all appointments for the specific user
   const fetchAppointments = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/appointments`, {
+      const response = await fetch(`https://amankaserver.vercel.app/api/appointments`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -89,7 +89,7 @@ const AppointmentScheduling = () => {
   const fetchDoctors = async () => {
     const token = localStorage.getItem('token') // Get the token from local storage
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/doctor-profiles`, {
+      const response = await fetch(`https://amankaserver.vercel.app/api/doctor-profiles`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`, // Include the token in the request
@@ -159,7 +159,7 @@ const AppointmentScheduling = () => {
     }
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/appointments`, {
+      const response = await fetch(`https://amankaserver.vercel.app/api/appointments`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

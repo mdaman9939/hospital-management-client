@@ -41,7 +41,7 @@ const DoctorProfilesSpecializations = () => {
     biography: '',
   })
   const [doctorProfiles, setDoctorProfiles] = useState([])
-  const API_URL = `${process.env.REACT_APP_API_URL}/api/doctor-profiles`
+  const API_URL = `https://amankaserver.vercel.app/api/doctor-profiles`
 
   // Fetch profiles from the backend
   const fetchProfiles = async () => {
